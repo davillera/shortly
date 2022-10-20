@@ -3,10 +3,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-body {
-  background-color: hsl(0deg, 0%, 75%);
+.nav-container hr {
+  transform: scale(90%);
+}
+.nav-container .btn-menu {
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+.nav-container a {
+  color: white;
+  font-family: Poppins;
+  font-weight: 700;
+  margin: 2em;
+}
+.nav-container .main {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5em;
+}
+.nav-container .nav {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: hsl(257deg, 27%, 26%);
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  margin: auto;
+  transform: scale(90%);
+  border-radius: 20px;
+}
+.nav-container .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-container .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-container .login .signup {
+  padding: 1em 7em 1em 7em;
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 30px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 
 .attribution {

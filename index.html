@@ -6,32 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./css/index.css">
-
+  <script src="https://kit.fontawesome.com/1676172edd.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
 </head>
 
 <body>
 
   <header>
+    <section class="nav-container">
+      <div class="main">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="logo">
+          </div>
+          
+          <div class="toggle">
+            <button class="btn-menu" id="menu">
+              <i id="toggle" class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      
+      <nav id="nav" class="none">
+        
 
-    <div class="logo">
-      <img src="./images/logo.svg" alt="">
-    </div>
+        <div class="links">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </div>
 
-    <nav class="nav">
-      <div class="item-nav"><a href="#">Features</a></div>
-      <div class="item-nav"><a href="#">Pricing</a></div>
-      <div class="item-nav"><a href="#">Resources</a></div>
-    </nav>
+        <hr>
 
-    <div class="login">
-      <div class="item-login"><a href="#">Login</a></div>
-      <div class="item-login"><a href="#">Sign Up</a></div>
-    </div>
+        <div class="login">
+          <a href="#">Login</a>
+          <a href="#" class="signup">Sign Up</a>
+        </div>
+
+      </nav>
+    </section>
 
   </header>
   <div class="landing">
