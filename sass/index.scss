@@ -24,21 +24,26 @@ $desktop: 1440px;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+
+}
+body{
+
 }
 
 .nav-container{
   hr{
     transform: scale(90%);
   }
-
+  background-color: white;
   .btn-menu{
     border: none;
     background: none;
     font-size: 20px;
+    background-color: white;
   }
   a{
     color: white;
-    font-family: Poppins;
+    font-family: $font-family;
     font-weight: $weight1;
     margin:2em;
   }
@@ -50,6 +55,7 @@ $desktop: 1440px;
     align-items: center;
     justify-content: space-between;
     margin:1.5em;
+    background-color: white;
 
   }
   .nav{
@@ -77,7 +83,7 @@ $desktop: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    .signup{
+    .btn{
       padding: 1em 7em 1em 7em;
       background-color: $cyan;
       border-radius: 30px;
@@ -91,6 +97,107 @@ $desktop: 1440px;
   display: block;
 }
 
+.oncomputer{
+  width: 100vh
+}
+.landing{
+
+  h1{
+    display: flex;
+    font-family: $font-family;
+    text-align: center;
+    color: $veryDarkBlue;
+    margin: 0 1em 0 1em;
+  }
+  p{
+    font-size: $font-size;
+    font-family: $font-family;
+    text-align: center;
+    color: $gray;
+  }
+  display: flex;
+  flex-direction: column;
+  a{
+    background-color: $cyan;
+    color: white;
+    font-family: $font-family;
+    text-align: center;
+    padding: 0.5em;
+    margin: 2em 8em;
+    font-weight: $weight0;
+    border-radius: 50px;
+  }
+}
+.shortter{
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+  background-color: $darkViolet;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-image:url("../images/bg-shorten-mobile.svg");
+  .url{
+    margin: 1.5em 1.5em 1em 1.5em;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    &::placeholder{
+      font-weight: $weight1;
+      padding: 1em;
+      color: $gray;
+    }
+  }
+  .shorten{
+    
+    height: 40px;
+    margin: 0em 1.2em 1em 1.2em;
+    border: none;
+    background:none;
+    background-color: $cyan;
+    border-radius: 10px;
+    font-family: $font-family;
+    font-weight: $weight0;
+    font-size: $font-size;
+    color: white;
+  }
+}
+.advanced-statistics{
+  margin-top: 6em;
+  h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-family;
+    color: $veryDarkBlue;
+  }
+}
+.advanced-statistics-items{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  h3{
+    font-family: $font-family;
+    font-weight: $weight1;
+    color: $veryDarkViolet;
+  }
+  img{
+    background-color: $darkViolet;
+    border-radius: 50%;
+    padding: .5em;
+    margin: 1em;
+  }
+  .item{
+    background-color: antiquewhite;
+    padding: 1.5em;
+    height: 200px;
+    margin: 1em 1.5em;
+  }
+  .icon-item{
+    position: relative;
+    transform: translateY(-30px);
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
