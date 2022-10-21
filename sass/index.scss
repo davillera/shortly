@@ -26,9 +26,7 @@ $desktop: 1440px;
   text-decoration: none;
 
 }
-body{
 
-}
 
 .nav-container{
   hr{
@@ -99,6 +97,7 @@ body{
 
 .oncomputer{
   width: 100vh
+  clip-path polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .landing{
 

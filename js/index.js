@@ -4,14 +4,19 @@ btn.addEventListener("click", () => {
   document.getElementById("nav").classList.toggle("nav");
 })
 
-$(function() {
+// var myHeaders = new Headers();
+// myHeaders.append("apikey", "LS7OtHZzG4it51Zv4zZL5Uv0GpU6L2CO");
 
-  var $body = $(document);
-  $body.bind('scroll', function() {
-      // "Desactivar" el scroll horizontal
-      if ($body.scrollLeft() !== 0) {
-          $body.scrollLeft(0);
-      }
-  });
+// var raw = "";
 
-}); 
+// var requestOptions = {
+//   method: 'POST',
+//   redirect: 'follow',
+//   headers: myHeaders,
+//   body: raw
+// };
+
+// fetch("https://api.apilayer.com/short_url/hash", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
