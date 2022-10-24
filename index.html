@@ -19,49 +19,61 @@
   <header>
     <section class="nav-container">
       <div class="main">
-          <div class="logo">
-            <img src="./images/logo.svg" alt="logo">
-          </div>
-          
-          <div class="toggle">
-            <button class="btn-menu" id="menu">
-              <i id="toggle" class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-        </div>
-      
-      <nav id="nav" class="none">
-        
 
-        <div class="links">
-          <a href="#">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">Resources</a>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo">
+        </div>
+
+        <div class="toggle">
+          <button class="btn-menu" id="menu">
+            <i id="toggle" class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <nav id="nav" class="none">
+
+        <div class="links" id="links">
+          <a class="nav-item" href="#">Features</a>
+          <a class="nav-item" href="#">Pricing</a>
+          <a class="nav-item" href="#">Resources</a>
         </div>
 
         <hr>
 
-        <div class="login">
-          <a href="#">Login</a>
+        <div class="login" id="login">
+          <a class="nav-item" href="#">Login</a>
           <a href="#" class="btn">Sign Up</a>
         </div>
+
+
+
 
       </nav>
     </section>
 
+
   </header>
   <div class="landing">
-    <img class="oncomputer" src="./images/illustration-working.svg" alt="woman on computer">
+    <div class="landing-main">
+      <img class="oncomputer" src="./images/illustration-working.svg" alt="woman on computer">
 
-    <h1>More than just shorter links</h1>
-    <p>Build your brand’s recognition and get detailed insights
-      on how your links are performing.</p>
-    <a href="#" class="btn">Get Started</a>
+      <div class="section-landing">
+        <h1>More than just <br> shorter links</h1>
+        <p>Build your brand’s recognition and get detailed <br> insights
+          on how your links are performing.</p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </div>
+
 
     <div class="shortter">
-      
-      <input class="url" placeholder="Shorten a Link Here..." type="url">
-      <button class="btn shorten">Shorten It!</button>
+
+      <input class="url" id="url" placeholder="Shorten a Link Here..." type="url">
+      <button id="short" class="btn shorten">Shorten It!</button>
+    </div>
+    <div class="historial" id="historial">
+
     </div>
 
     <div class="advance-container">
@@ -70,7 +82,7 @@
         <p>Track how your links are performing across the web with our
           advanced statistics dashboard.</p>
       </div>
-  
+
       <div class="advanced-statistics-items">
         <div class="brand item">
           <img class="icon-item" src="./images/icon-brand-recognition.svg" alt="">
@@ -92,7 +104,7 @@
         </div>
       </div>
     </div>
-    
+
 
   </div>
   <div class="boost">
@@ -102,25 +114,31 @@
 
   <footer>
     <img class="logo-footer" src="./images/logo.svg" alt="">
-    <h3>Features</h3>
-    <ul>
-      <li>Link Shortening</li>
-      <li>Branded Links</li>
-      <li>Analytics</li>
-    </ul>
-    <h3>Resources</h3>
-    <ul>
-      <li>Blog</li>
-      <li>Developers</li>
-      <li>Support</li>
-    </ul>
-    <h3>Company</h3>
-    <ul>
-      <li>About</li>
-      <li>Our Team</li>
-      <li>Careers</li>
-      <li>Contact</li>
-    </ul>
+    <div class="features">
+      <h3>Features</h3>
+      <ul>
+        <li>Link Shortening</li>
+        <li>Branded Links</li>
+        <li>Analytics</li>
+      </ul>
+    </div>
+    <div class="resources">
+      <h3>Resources</h3>
+      <ul>
+        <li>Blog</li>
+        <li>Developers</li>
+        <li>Support</li>
+      </ul>
+    </div>
+    <div class="company">
+      <h3>Company</h3>
+      <ul>
+        <li>About</li>
+        <li>Our Team</li>
+        <li>Careers</li>
+        <li>Contact</li>
+      </ul>
+    </div>
     <div class="rrss">
       <img class="rrss-item" src="./images/icon-facebook.svg" alt="">
       <img class="rrss-item" src="./images/icon-twitter.svg" alt="">
