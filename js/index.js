@@ -9,7 +9,7 @@ const url = document.getElementById("url")
 let acopiar = document.getElementById("acopiar");
 
 btnshort.addEventListener("click", () => {
-  if(typeof acopiar != "string" ){
+  if(url.value == "" ){
     urlwrong()
   }else{
     shorter()
@@ -19,7 +19,7 @@ btnshort.addEventListener("click", () => {
 let historial = []
 
 function shorter() {
-  document.getElementById("url").classList.remove("urlwrong");
+  document.getElementById("urlwrong", "url").classList.remove("malurl");
   let myHeaders = new Headers();
   myHeaders.append("apikey", "LS7OtHZzG4it51Zv4zZL5Uv0GpU6L2CO");
 
@@ -82,8 +82,8 @@ function shorter() {
 }
 
 function urlwrong(){
-  console.log("funciona");
-  document.getElementById("url").classList.add("urlwrong");
+  console.log("no link");
+  document.getElementById("urlwrong","url").classList.add("malurl");
 }
 
 

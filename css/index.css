@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Poppins;
 }
 
 .nav-container {
@@ -105,9 +106,14 @@
   border-radius: 50px;
 }
 
-.urlwrong {
-  border-width: 10px;
-  border-color: red;
+.none {
+  display: none;
+}
+
+.malurl {
+  display: block;
+  margin: 0 1.5em;
+  color: red;
 }
 
 .shortter {
