@@ -349,6 +349,9 @@ footer li {
   .none .login .btn:hover {
     filter: opacity(60%);
   }
+  .none {
+    display: none;
+  }
   .landing .advance-container .advanced-statistics-items {
     display: flex;
     justify-content: space-around;
