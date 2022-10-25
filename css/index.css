@@ -105,6 +105,11 @@
   border-radius: 50px;
 }
 
+.urlwrong {
+  border-width: 10px;
+  border-color: red;
+}
+
 .shortter {
   display: flex;
   flex-direction: column;
@@ -113,6 +118,7 @@
   justify-content: space-between;
   border-radius: 20px;
   background-image: url("../images/bg-shorten-mobile.svg");
+  text-overflow: ellipsis;
 }
 .shortter .url {
   margin: 1.5em 1.5em 1em 1.5em;
@@ -146,6 +152,56 @@
   font-weight: 500;
   font-size: 18px;
   color: white;
+}
+
+.result-short {
+  margin: 1em 6em;
+  background-color: hsl(230deg, 25%, 95%);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  margin: 1em 1em;
+}
+.result-short a {
+  margin: 0;
+  padding: 0;
+  color: hsl(260deg, 8%, 14%);
+  background-color: hsl(230deg, 25%, 95%);
+  text-align: left;
+}
+.result-short .result-btn {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.result-short .result-btn a {
+  background-color: hsl(230deg, 25%, 95%);
+  color: hsl(180deg, 66%, 49%);
+  margin: 1em 0;
+  font-weight: 500;
+  text-align: left;
+}
+.result-short .result-btn .copiado {
+  border: none;
+  background-color: hsl(255deg, 11%, 22%);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: white;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.result-short .result-btn .copiar {
+  border: none;
+  background: none;
+  border-color: hsl(180deg, 66%, 49%);
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  font-family: Poppins;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 5px;
 }
 
 .landing .advance-container {
@@ -266,6 +322,9 @@ footer li {
   .none .nav-item {
     color: hsl(0deg, 0%, 75%);
   }
+  .none .nav-item:hover {
+    color: hsl(260deg, 8%, 14%);
+  }
   .none .links {
     display: flex;
     flex-direction: row;
@@ -280,6 +339,9 @@ footer li {
     font-size: 18px;
     padding: 1em 2.5em;
     border-radius: 35px;
+  }
+  .none .login .btn:hover {
+    filter: opacity(60%);
   }
   .landing .advance-container .advanced-statistics-items {
     display: flex;
@@ -323,6 +385,9 @@ footer li {
     flex-direction: column;
     justify-content: space-around;
   }
+  .landing .landing-main .section-landing a:hover {
+    filter: opacity(60%);
+  }
   .landing .landing-main .section-landing h1 {
     margin: 0;
     text-align: left;
@@ -364,6 +429,9 @@ footer li {
     align-items: center;
     height: auto;
   }
+  .shortter .shorten:hover {
+    filter: opacity(60%);
+  }
   .result-short {
     margin: 1em 6em;
     background-color: hsl(230deg, 25%, 95%);
@@ -378,6 +446,13 @@ footer li {
     padding: 0;
     color: hsl(260deg, 8%, 14%);
     background-color: hsl(230deg, 25%, 95%);
+  }
+  .result-short .result-btn {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
   .result-short .result-btn a {
     background-color: hsl(230deg, 25%, 95%);
@@ -411,18 +486,30 @@ footer li {
   .boost .btn {
     margin: 0 50em;
   }
+  .boost .btn:hover {
+    filter: opacity(60%);
+  }
   footer {
     display: flex;
     padding: 2em 0;
     flex-direction: row;
     justify-content: space-around;
   }
-  footer .company ul, footer .resources ul, footer .features ul {
+  footer .company ul,
+footer .resources ul,
+footer .features ul {
     text-align: start;
   }
-  footer .company ul li, footer .resources ul li, footer .features ul li {
+  footer .company ul li,
+footer .resources ul li,
+footer .features ul li {
     text-align: start;
     text-decoration: none;
+  }
+  footer .company ul li:hover,
+footer .resources ul li:hover,
+footer .features ul li:hover {
+    color: hsl(180deg, 66%, 49%);
   }
   footer .logo-footer {
     transform: none;
@@ -430,12 +517,15 @@ footer li {
     height: 50px;
   }
   footer .rrss {
-    margin: -10px;
+    margin: 0 2em;
     padding: 0;
     transform: scale(15%);
   }
   footer .rrss img {
     padding: 0;
     margin: 0 2em;
+  }
+  footer .rrss img:hover {
+    color: hsl(180deg, 66%, 49%);
   }
 }/*# sourceMappingURL=index.css.map */

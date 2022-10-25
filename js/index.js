@@ -6,15 +6,20 @@ btn.addEventListener("click", () => {
 
 const btnshort = document.getElementById("short")
 const url = document.getElementById("url")
+let acopiar = document.getElementById("acopiar");
 
 btnshort.addEventListener("click", () => {
-  shorter()
-
+  if(typeof acopiar != "string" ){
+    urlwrong()
+  }else{
+    shorter()
+  }
 })
 
 let historial = []
 
 function shorter() {
+  document.getElementById("url").classList.remove("urlwrong");
   let myHeaders = new Headers();
   myHeaders.append("apikey", "LS7OtHZzG4it51Zv4zZL5Uv0GpU6L2CO");
 
@@ -45,6 +50,7 @@ function shorter() {
       let div = `
       <div class="result-short"> 
         <a href="${result.long_url}">${result.long_url}</a>
+        
         <div class="result-btn">
         <a href="${result.short_url}" id="acopiar" target="_blank" >${result.short_url} </a>
         
@@ -54,11 +60,12 @@ function shorter() {
       resultados.innerHTML += div
 
       const copiarbtn = document.getElementById("copiar-btn")
+      
       copiarbtn.addEventListener("click", () =>{
         copyToClipboard()
       })
       function copyToClipboard() {
-        let acopiar = document.getElementById("acopiar");
+        
         const inputFalse = document.createElement("input");
         inputFalse.setAttribute("value", acopiar.innerHTML);
 
@@ -72,6 +79,11 @@ function shorter() {
       };
     }))
     .catch(error => console.log('error', error));
+}
+
+function urlwrong(){
+  console.log("funciona");
+  document.getElementById("url").classList.add("urlwrong");
 }
 
 

@@ -151,6 +151,10 @@ $desktop: 1440px;
     border-radius: 50px;
   }
 }
+.urlwrong {
+  border-width: 10px;
+  border-color: red;
+}
 
 .shortter {
   display: flex;
@@ -160,6 +164,8 @@ $desktop: 1440px;
   justify-content: space-between;
   border-radius: 20px;
   background-image: url("../images/bg-shorten-mobile.svg");
+  text-overflow: ellipsis;
+  
 
   .url {
     margin: 1.5em 1.5em 1em 1.5em;
@@ -172,6 +178,8 @@ $desktop: 1440px;
       padding: 1em;
       color: $gray;
     }
+
+    
   }
 
   .shorten {
@@ -186,6 +194,63 @@ $desktop: 1440px;
     font-weight: $weight0;
     font-size: $font-size;
     color: white;
+  }
+}
+
+.result-short {
+  margin: 1em 6em;
+  background-color: $bgshorter;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  margin: 1em 1em;
+
+  a {
+
+    margin: 0;
+    padding: 0;
+    color: $veryDarkBlue;
+    background-color: $bgshorter;
+    text-align: left;
+  }
+
+  .result-btn {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      background-color: $bgshorter;
+      color: $cyan;
+      margin: 1em 0;
+      font-weight: $weight0;
+      text-align: left;
+
+    }
+
+    .copiado {
+      border: none;
+      background-color: $veryDarkViolet;
+      padding: .5em 1em;
+      border-radius: 5px;
+      color: white;
+      font-family: $font-family;
+      font-weight: $weight0;
+    }
+
+    .copiar {
+      border: none;
+      background: none;
+      border-color: $cyan;
+      background-color: $cyan;
+      color: white;
+      font-family: $font-family;
+      font-weight: $weight0;
+      padding: .5em 1em;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -330,6 +395,7 @@ footer {
   #nav {
     display: flex;
     justify-content: space-evenly;
+
   }
 
   .none {
@@ -338,11 +404,16 @@ footer {
 
     .nav-item {
       color: $gray;
+
+      &:hover {
+        color: $veryDarkBlue
+      }
     }
 
     .links {
       display: flex;
       flex-direction: row;
+
     }
 
     .login {
@@ -355,6 +426,10 @@ footer {
         font-size: $font-size;
         padding: 1em 2.5em;
         border-radius: 35px;
+
+        &:hover {
+          filter: opacity(60%);
+        }
       }
     }
   }
@@ -364,12 +439,14 @@ footer {
       .advanced-statistics-items {
         display: flex;
         justify-content: space-around;
-        margin: 0 ;
+        margin: 0;
         padding: 0;
-        .detailed{
+
+        .detailed {
           transform: translateY(75px);
         }
-        .fully{
+
+        .fully {
           transform: translateY(150px);
         }
 
@@ -378,21 +455,23 @@ footer {
           margin-bottom: 15em;
           padding: 1em;
           width: 300px;
-          
+
         }
       }
+
       .advanced-statistics {
         display: flex;
         flex-direction: column;
         margin: 4em 0;
-  
+
         p {
           margin: 0 30em;
         }
-  
-        
+
+
       }
     }
+
     .landing-main {
       margin: 0 5em;
       display: flex;
@@ -409,6 +488,12 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        a {
+          &:hover {
+            filter: opacity(60%);
+          }
+        }
 
         h1 {
           margin: 0;
@@ -452,10 +537,13 @@ footer {
       align-items: center;
       height: auto;
 
+      &:hover {
+        filter: opacity(60%);
+      }
     }
   }
 
-  
+
 
   .result-short {
     margin: 1em 6em;
@@ -465,6 +553,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     border-radius: 10px;
+
     a {
       margin: 0;
       padding: 0;
@@ -473,13 +562,21 @@ footer {
     }
 
     .result-btn {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
       a {
         background-color: $bgshorter;
         color: $cyan;
         margin-right: 1em;
         font-weight: $weight0;
+
       }
-      .copiado{
+
+      .copiado {
         border: none;
         background-color: $veryDarkViolet;
         padding: .5em 1em;
@@ -488,7 +585,8 @@ footer {
         font-family: $font-family;
         font-weight: $weight0;
       }
-      .copiar{ 
+
+      .copiar {
         border: none;
         background: none;
         border-color: $cyan;
@@ -501,40 +599,62 @@ footer {
       }
     }
   }
-  .boost{
-    h2{
+
+  .boost {
+    h2 {
       font-size: 26px;
     }
-    .btn{
+
+    .btn {
       margin: 0 50em;
+
+      &:hover {
+        filter: opacity(60%);
+      }
     }
   }
-  footer{
+
+  footer {
     display: flex;
-    padding: 2em 0; 
+    padding: 2em 0;
     flex-direction: row;
     justify-content: space-around;
-    .company, .resources, .features{
-      ul{
+
+    .company,
+    .resources,
+    .features {
+      ul {
         text-align: start;
-        li{
+
+        li {
           text-align: start;
           text-decoration: none;
+
+          &:hover {
+            color: $cyan;
+          }
         }
       }
     }
-    .logo-footer{
+
+    .logo-footer {
       transform: none;
       width: 150px;
       height: 50px;
     }
-    .rrss{
-      margin: -10px;
+
+    .rrss {
+      margin: 0 2em;
       padding: 0;
       transform: scale(15%);
-      img{
+
+      img {
         padding: 0;
         margin: 0 2em;
+
+        &:hover {
+          color: $cyan;
+        }
       }
     }
   }
