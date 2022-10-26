@@ -212,14 +212,15 @@ $desktop: 1440px;
   border-radius: 10px;
   text-overflow: ellipsis;
   margin: 1em 1em;
+  justify-content: center;
 
   a {
-
     margin: 0;
     padding: 0;
     color: $veryDarkBlue;
     background-color: $bgshorter;
     text-align: left;
+    justify-content: center;
   }
 
   .result-btn {
@@ -442,6 +443,12 @@ footer {
   .none {
     display: none;
   }
+  .malurl{
+    display: block;
+    margin: 0 1.5em;
+    color: red;
+    
+  }
   .landing {
     .advance-container {
       .advanced-statistics-items {
@@ -555,7 +562,7 @@ footer {
 
 
   .result-short {
-    margin: 1em 6em;
+    margin: 0em 6em 1em 6em;
     background-color: $bgshorter;
     padding: 1em;
     display: flex;
@@ -563,11 +570,12 @@ footer {
     justify-content: space-between;
     border-radius: 10px;
 
-    a {
-      margin: 0;
-      padding: 0;
+    a{
+      display: flex;
+      margin: 1em 0;
       color: $veryDarkBlue;
       background-color: $bgshorter;
+      text-align: center;
     }
 
     .result-btn {

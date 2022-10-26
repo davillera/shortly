@@ -8,6 +8,7 @@ let url = document.getElementById("url")
 
 let historial = []
 
+let urlshort
 
 function shorter() {
   document.getElementById("urlwrong", "url").classList.remove("malurl");
@@ -28,7 +29,7 @@ function shorter() {
 
     .then(response => response.json())
     .then((result => {
-      let urlshort = result.short_url
+      urlshort = result.short_url
       let urllong = result.long_url
       console.log(urllong);
       console.log(urlshort);
@@ -36,17 +37,19 @@ function shorter() {
         long: `${result.long_url}`,
         short: `${result.short_url}`
       })
-      let contenido = result.short_url
 
 
       let div = `
       <div class="result-short"> 
-        <a href="${result.long_url}">${result.long_url}</a>
+      
+      <a href="${result.long_url}">${result.long_url}</a>
         
+
         <div class="result-btn">
         <a href="${result.short_url}" id="" target="_blank" >${result.short_url} </a>
         
-        <button id="${contenido}" class="copiar" onclick="copyToClipboard(${contenido})"> <span > Copy </span> </button></div>
+        <button id="copiar-btn" class="copiar" onclick="copyToClipboard()"> <span class="copied" id='span' > Copy </span> </button>
+        </div>
       </div>`
       const resultados = document.getElementById("historial")
       resultados.innerHTML += div
@@ -55,8 +58,10 @@ function shorter() {
     .catch(error => console.log('error', error));
 }
 
-function copyToClipboard(contenido){
-  navigator.clipboard.writeText(contenido);
+function copyToClipboard(){
+  navigator.clipboard.writeText(urlshort);
+  document.getElementById('span').innerHTML = 'Copied!';
+  document.getElementById("copiar-btn").classList.toogle("copiado");
 }
 
 
@@ -72,37 +77,5 @@ function urlwrong() {
   console.log("no link");
   document.getElementById("urlwrong", "url").classList.add("malurl");
 }
-
-copiar-btn.addEventListener("click", e => {
-  console.log(e);
-  console.log("copiado");
-})
-
-
-// function copyToClipboard(id_elemento) {
-//   try {
-//     const inputFalse = document.createElement("input");
-//     inputFalse.setAttribute("value", document.getElementById(id_elemento).innerHTML);
-//     document.body.appendChild(inputFalse);
-//     inputFalse.select();
-//     document.execCommand("copy");
-//     document.body.removeChild(inputFalse);
-
-    
-//     // const inputFalse = document.createElement("input")
-//     // inputFalse.setAttribute("value". document,getElementById(id_elemento.innerHTML));
-//     // document.body.appendChild(inputFalse);
-//     // inputFalse.select();
-//     // const content = document.getElementById(id_elemento);
-//     // content.select();
-//     // content.setSelectionRange(0, 99999);
-//     // document.execCommand("copy");
-//     console.log("Link copiado");
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-
 
 

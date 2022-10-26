@@ -169,6 +169,7 @@
   border-radius: 10px;
   text-overflow: ellipsis;
   margin: 1em 1em;
+  justify-content: center;
 }
 .result-short a {
   margin: 0;
@@ -176,6 +177,7 @@
   color: hsl(260deg, 8%, 14%);
   background-color: hsl(230deg, 25%, 95%);
   text-align: left;
+  justify-content: center;
 }
 .result-short .result-btn {
   text-align: left;
@@ -352,6 +354,11 @@ footer li {
   .none {
     display: none;
   }
+  .malurl {
+    display: block;
+    margin: 0 1.5em;
+    color: red;
+  }
   .landing .advance-container .advanced-statistics-items {
     display: flex;
     justify-content: space-around;
@@ -442,7 +449,7 @@ footer li {
     filter: opacity(60%);
   }
   .result-short {
-    margin: 1em 6em;
+    margin: 0em 6em 1em 6em;
     background-color: hsl(230deg, 25%, 95%);
     padding: 1em;
     display: flex;
@@ -451,10 +458,11 @@ footer li {
     border-radius: 10px;
   }
   .result-short a {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin: 1em 0;
     color: hsl(260deg, 8%, 14%);
     background-color: hsl(230deg, 25%, 95%);
+    text-align: center;
   }
   .result-short .result-btn {
     display: flex;
