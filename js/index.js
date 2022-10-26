@@ -56,7 +56,6 @@ function shorter() {
 }
 
 function copyToClipboard(contenido){
-  
   navigator.clipboard.writeText(contenido);
 }
 
